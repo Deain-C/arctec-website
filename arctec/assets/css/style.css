@@ -1,0 +1,649 @@
+/* =====================================================
+   ARCTEC V4 PRO
+   style.css
+===================================================== */
+
+:root {
+    --primary: #AD1445;          /* 品牌色（可保留不变） */
+    --primary-light: #d62863;    /* 品牌色（可保留不变） */
+
+    --bg: #f8f9fa;              /* 主背景：浅灰白（比纯白更柔和） */
+    --bg2: #ffffff;             /* 第二背景：纯白 */
+    --bg3: #e9ecef;             /* 第三背景：浅灰 */
+
+    --text: #1a1a2e;            /* 主文字：深色（原来的深蓝） */
+    --text-light: #4a5568;      /* 浅色文字：中灰 */
+
+    --line: rgba(0, 0, 0, 0.08);  /* 边框/分割线：浅灰色 */
+    --radius:16px;
+    --transition:.35s;
+    --container:1320px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    font-family:"Inter",sans-serif;
+
+    overflow-x:hidden;
+
+    line-height:1.7;
+
+}
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+.container{
+
+    width:min(92%,var(--container));
+
+    margin:auto;
+
+}
+
+/* ==========================
+        HEADER
+========================== */
+
+..header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.92);  /* 白色半透明毛玻璃 */
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);  /* 浅色分割线 */
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);   /* 淡淡的阴影增加层次 */
+}
+
+.header .container{
+
+    height:86px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.logo{
+
+    font-size:28px;
+
+    font-weight:800;
+
+    letter-spacing:4px;
+
+}
+
+.menu{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:42px;
+
+}
+
+.menu a {
+    font-size: 15px;
+    color: #333;        /* 深色文字 */
+    transition: .3s;
+}
+.menu a:hover {
+    color: var(--primary);  /* 悬停变品牌红 */
+}
+
+.menu li::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--primary);
+
+    transition:.3s;
+
+}
+
+.menu li:hover::after{
+
+    width:100%;
+
+}
+
+/* ==========================
+        HERO
+========================== */
+
+.hero{
+
+    position:relative;
+
+    height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    overflow:hidden;
+
+}
+
+.hero-video {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at center,
+        rgba(173, 20, 69, 0.15),  /* 品牌色变淡，只是淡淡一点红 */
+        transparent 60%),
+        linear-gradient(180deg, #f0f2f5, #ffffff);  /* 浅色渐变 */
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(180deg,
+        rgba(255,255,255,0.1),   /* 很淡的白色遮罩，几乎透明 */
+        rgba(255,255,255,0.4));  /* 底部略深一点，让文字更清晰 */
+}
+.hero-content{
+
+    position:relative;
+
+    z-index:10;
+
+}
+
+.eyebrow{
+
+    color:var(--primary);
+
+    font-size:20px;
+
+    letter-spacing:4px;
+
+    margin-bottom:25px;
+    
+    text-align: center; 
+    
+
+    
+
+}
+
+.hero h1{
+
+    font-size:65px;
+
+    line-height:1.05;
+
+    font-weight:1000;
+
+    font-weight:800;
+
+}
+
+.hero p{
+
+    margin-top:35px 0 auto;
+
+    color:var(--text-light);
+
+    font-size:22px;
+
+    flex-direction: column; 
+
+    justify-content: center;
+    
+    text-align: center;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    margin-top:50px;
+
+}
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:18px 42px;
+
+    border-radius:60px;
+
+    transition:.35s;
+
+    font-weight:600;
+
+}
+
+.btn-primary{
+
+    background:var(--primary);
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 45px rgba(173,20,69,.4);
+
+}
+
+.btn-secondary{
+
+    border:1px solid rgba(255,255,255,.25);
+
+}
+
+.btn-secondary:hover{
+
+    background:white;
+
+    color:#111;
+
+}
+
+/* ==========================
+      SECTION
+========================== */
+
+.section{
+
+    padding:120px 0;
+
+}
+
+.dark{
+
+    background:var(--bg2);
+
+}
+
+.section-title{
+
+    font-size:46px;
+
+    font-weight:700;
+
+    margin-bottom:70px;
+
+}
+
+/* ==========================
+      CARD GRID
+========================== */
+
+.card-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.card {
+    background: #ffffff;            /* 纯白背景 */
+    border: 1px solid #e2e8f0;     /* 浅灰边框（替代原来的 var(--line)） */
+    border-radius: var(--radius);
+    padding: 40px;
+    transition: .35s;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);  /* 添加柔和阴影 */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+    box-shadow: 0 20px 50px rgba(173, 20, 69, 0.15);
+}
+
+.card h3{
+
+    font-size:26px;
+
+    margin-bottom:18px;
+
+}
+
+.card p{
+
+    color:var(--text-light);
+
+}
+
+/* ==========================
+      WHY
+========================== */
+
+.feature-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+}
+
+.feature{
+
+    background:rgba(255,255,255,.03);
+
+    padding:50px;
+
+    border-radius:20px;
+
+    transition:.35s;
+
+    border:1px solid transparent;
+
+}
+
+.feature:hover{
+
+    border-color:var(--primary);
+
+    transform:translateY(-8px);
+
+}
+
+.feature h3{
+
+    font-size:28px;
+
+    margin-bottom:18px;
+
+}
+
+.feature p{
+
+    color:var(--text-light);
+
+}
+
+/* ==========================
+      INDUSTRIES
+========================== */
+
+.industry-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:28px;
+
+}
+
+.industry-grid div {
+    background: linear-gradient(180deg, #12253d, #0c1a2b);
+    border-radius: 18px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    transition: .35s;
+    border: 1px solid rgba(255, 255, 255, .05);
+    color: #ffffff;          /* ← 添加这一行 */
+}
+
+.industry-grid div:hover{
+
+    transform:scale(1.03);
+
+    border-color:var(--primary);
+
+    box-shadow:0 25px 80px rgba(173,20,69,.25);
+
+}
+
+/* ==========================
+      FOOTER
+========================== */
+
+footer {
+    background: #f8f9fa;           /* 浅灰色背景 */
+    border-top: 1px solid #e2e8f0; /* 浅色分割线 */
+}
+
+.footer p {
+    color: var(--text-light);      /* 深灰色文字 */
+}
+
+/* ==========================
+      RESPONSIVE
+========================== */
+
+@media(max-width:1200px){
+
+.card-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.industry-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.hero h1{
+
+font-size:60px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.header .container{
+
+height:72px;
+
+}
+
+.menu{
+
+display:none;
+
+}
+
+.hero{
+
+height:auto;
+
+padding:180px 0 120px;
+
+}
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+}
+
+.card-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.feature-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.industry-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.section{
+
+padding:80px 0;
+
+}
+
+.section-title{
+
+font-size:34px;
+
+}
+
+.footer{
+
+flex-direction:column;
+
+gap:30px;
+
+text-align:center;
+
+}
+
+}
+/* ======================================
+   Scroll Animation
+====================================== */
+
+.hidden{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:1s cubic-bezier(.2,.65,.2,1);
+
+}
+
+.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+.header-scroll{
+
+    background:rgba(7,17,29,.92);
+
+    backdrop-filter:blur(22px);
+
+    box-shadow:0 10px 40px rgba(0,0,0,.35);
+
+}
+
+/* Button Light */
+
+.btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:var(--x);
+
+    top:var(--y);
+
+    width:0;
+
+    height:0;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.18);
+
+    transition:.45s;
+
+}
+
+.btn:hover::before{
+
+    width:320px;
+
+    height:320px;
+
+}
+

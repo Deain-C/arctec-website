@@ -1,0 +1,1227 @@
+/* =========================================================
+   ARCTEC Website
+   File: assets/css/navbar.css
+   Version: V1.0
+   ========================================================= */
+
+/* =========================
+   Navbar
+========================= */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:88px;
+
+    z-index:9999;
+
+    transition:all .35s ease;
+
+    background:rgba(6,12,26,.18);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+/* Scroll */
+
+.navbar.scrolled{
+
+    height:72px;
+
+    background:rgba(4,10,22,.96);
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.35);
+
+}
+
+/* =========================
+   Container
+========================= */
+
+.navbar-wrapper{
+
+    width:100%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+    height:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 40px;
+
+}
+
+/* =========================
+   Logo
+========================= */
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    flex-shrink:0;
+
+}
+
+.logo img{
+
+    height:42px;
+
+    width:auto;
+
+    transition:.35s;
+
+}
+
+.navbar.scrolled .logo img{
+
+    height:36px;
+
+}
+
+/* =========================
+   Desktop Menu
+========================= */
+
+.nav-menu{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex:1;
+
+}
+
+.nav-menu ul{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:42px;
+
+    list-style:none;
+
+    margin:0;
+
+    padding:0;
+
+}
+
+.nav-menu li{
+
+    position:relative;
+
+}
+
+/* =========================
+   Links
+========================= */
+
+.nav-menu a{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    height:88px;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    color:#ffffff;
+
+    letter-spacing:.3px;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.navbar.scrolled .nav-menu a{
+
+    height:72px;
+
+}
+
+.nav-menu a:hover{
+
+    color:#AD1445;
+
+}
+
+/* underline */
+
+.nav-menu a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:24px;
+
+    width:0;
+
+    height:2px;
+
+    background:#AD1445;
+
+    transition:.35s;
+
+}
+
+.nav-menu a:hover::after{
+
+    width:100%;
+
+}
+
+/* =========================
+   Right Area
+========================= */
+
+.nav-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-shrink:0;
+
+}
+
+/* =========================
+   Contact Button
+========================= */
+
+.btn-contact{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    height:46px;
+
+    padding:0 28px;
+
+    border-radius:999px;
+
+    background:#AD1445;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    letter-spacing:.4px;
+
+    transition:.35s;
+
+}
+
+.btn-contact:hover{
+
+    transform:translateY(-2px);
+
+    background:#c51d57;
+
+    box-shadow:
+
+    0 8px 30px rgba(173,20,69,.45);
+
+}
+
+/* =========================
+   Mobile Button
+========================= */
+
+.mobile-btn{
+
+    width:46px;
+
+    height:46px;
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    display:none;
+
+    background:transparent;
+
+    position:relative;
+
+}
+
+.mobile-btn span{
+
+    position:absolute;
+
+    left:10px;
+
+    width:26px;
+
+    height:2px;
+
+    background:#fff;
+
+    transition:.35s;
+
+}
+
+.mobile-btn span:nth-child(1){
+
+    top:14px;
+
+}
+
+.mobile-btn span:nth-child(2){
+
+    top:22px;
+
+}
+
+.mobile-btn span:nth-child(3){
+
+    top:30px;
+
+}
+
+/* Active */
+
+.mobile-btn.active span:nth-child(1){
+
+    transform:rotate(45deg);
+
+    top:22px;
+
+}
+
+.mobile-btn.active span:nth-child(2){
+
+    opacity:0;
+
+}
+
+.mobile-btn.active span:nth-child(3){
+
+    transform:rotate(-45deg);
+
+    top:22px;
+
+}
+
+/* =========================================================
+   Navbar Part 2
+   Dropdown Menu
+========================================================= */
+
+/* =========================
+   Dropdown Container
+========================= */
+
+.has-dropdown{
+    position:relative;
+}
+
+/* =========================
+   Dropdown Arrow
+========================= */
+
+.has-dropdown > a{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.has-dropdown > a::before{
+    content:"";
+    position:absolute;
+    right:-16px;
+    top:50%;
+    width:6px;
+    height:6px;
+
+    border-right:2px solid rgba(255,255,255,.7);
+    border-bottom:2px solid rgba(255,255,255,.7);
+
+    transform:translateY(-70%) rotate(45deg);
+
+    transition:.3s;
+}
+
+.has-dropdown:hover > a::before{
+
+    transform:
+    translateY(-40%)
+    rotate(225deg);
+
+    border-color:#AD1445;
+
+}
+
+/* =========================
+   Dropdown Panel
+========================= */
+
+.dropdown{
+
+    position:absolute;
+
+    top:100%;
+    left:50%;
+
+    transform:
+    translateX(-50%)
+    translateY(20px);
+
+    min-width:270px;
+
+    padding:16px 0;
+
+    opacity:0;
+    visibility:hidden;
+
+    pointer-events:none;
+
+    transition:
+    opacity .35s ease,
+    transform .35s ease,
+    visibility .35s;
+
+    background:
+    rgba(10,18,35,.98);
+
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+
+    border-radius:18px;
+
+    border:1px solid
+    rgba(255,255,255,.06);
+
+    overflow:hidden;
+
+    z-index:100;
+
+}
+
+/* =========================
+   Dropdown Shadow
+========================= */
+
+.dropdown{
+
+    box-shadow:
+
+    0 30px 70px rgba(0,0,0,.45),
+
+    0 0 40px rgba(173,20,69,.08);
+
+}
+
+/* =========================
+   Show Dropdown
+========================= */
+
+.has-dropdown:hover .dropdown{
+
+    opacity:1;
+
+    visibility:visible;
+
+    pointer-events:auto;
+
+    transform:
+
+    translateX(-50%)
+
+    translateY(12px);
+
+}
+
+/* =========================
+   Dropdown Item
+========================= */
+
+.dropdown a{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-start;
+
+    height:52px;
+
+    padding:0 26px;
+
+    color:#ffffff;
+
+    font-size:14px;
+
+    font-weight:500;
+
+    letter-spacing:.3px;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+    position:relative;
+
+}
+
+/* remove desktop underline */
+
+.dropdown a::after{
+
+    display:none;
+
+}
+
+/* =========================
+   Left Indicator
+========================= */
+
+.dropdown a::before{
+
+    content:"";
+
+    width:0;
+
+    height:2px;
+
+    background:#AD1445;
+
+    margin-right:0;
+
+    transition:.35s;
+
+}
+
+/* =========================
+   Hover Animation
+========================= */
+
+.dropdown a:hover{
+
+    color:#ffffff;
+
+    background:
+
+    rgba(255,255,255,.03);
+
+    padding-left:34px;
+
+}
+
+/* grow line */
+
+.dropdown a:hover::before{
+
+    width:16px;
+
+    margin-right:12px;
+
+}
+
+/* =========================
+   Red Glow Effect
+========================= */
+
+.dropdown a:hover{
+
+    box-shadow:
+
+    inset 3px 0 0 #AD1445,
+
+    inset 0 0 20px rgba(173,20,69,.12);
+
+}
+
+/* =========================
+   Active Menu
+========================= */
+
+.dropdown a.active{
+
+    color:#AD1445;
+
+    background:
+
+    rgba(173,20,69,.08);
+
+}
+
+/* =========================
+   Divider
+========================= */
+
+.dropdown a + a{
+
+    border-top:
+
+    1px solid
+
+    rgba(255,255,255,.04);
+
+}
+
+/* =========================
+   Floating Animation
+========================= */
+
+@keyframes dropdownFloat{
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+        translateX(-50%)
+
+        translateY(28px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+        translateX(-50%)
+
+        translateY(12px);
+
+    }
+
+}
+
+.has-dropdown:hover .dropdown{
+
+    animation:
+
+    dropdownFloat
+
+    .28s ease;
+
+}
+
+/* =========================
+   Red Top Line
+========================= */
+
+.dropdown::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:2px;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        #AD1445,
+
+        transparent
+
+    );
+
+}
+
+/* =========================
+   Red Glow Border
+========================= */
+
+.dropdown:hover{
+
+    border-color:
+
+    rgba(173,20,69,.25);
+
+    box-shadow:
+
+    0 35px 70px rgba(0,0,0,.5),
+
+    0 0 40px rgba(173,20,69,.18);
+
+}
+
+/* =========================
+   Smooth GPU Rendering
+========================= */
+
+.dropdown,
+.dropdown a{
+
+    will-change:
+
+    transform,
+    opacity;
+
+}
+/* =========================================================
+   Navbar Part 3
+   Mobile / Responsive / Enterprise Finish
+========================================================= */
+
+
+/* =========================
+   Mobile Menu
+========================= */
+
+.mobile-menu{
+
+    position:fixed;
+
+    top:72px;
+
+    right:-100%;
+
+    width:320px;
+
+    max-width:85vw;
+
+    height:calc(100vh - 72px);
+
+    background:rgba(6,12,26,.98);
+
+    backdrop-filter:blur(24px);
+    -webkit-backdrop-filter:blur(24px);
+
+    border-left:1px solid rgba(255,255,255,.06);
+
+    box-shadow:-20px 0 50px rgba(0,0,0,.45);
+
+    transition:right .35s ease;
+
+    overflow-y:auto;
+
+    z-index:9998;
+
+    padding:20px 0;
+
+}
+
+.mobile-menu.active{
+
+    right:0;
+
+}
+
+
+/* Overlay */
+
+.mobile-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.55);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s;
+
+    z-index:9997;
+
+}
+
+.mobile-overlay.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+
+/* =========================
+   Mobile Menu Items
+========================= */
+
+.mobile-menu a{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    height:58px;
+
+    padding:0 28px;
+
+    color:#ffffff;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+
+    transition:.3s;
+
+}
+
+.mobile-menu a:hover{
+
+    background:rgba(173,20,69,.10);
+
+    padding-left:36px;
+
+    color:#AD1445;
+
+}
+
+
+/* =========================
+   Mobile Dropdown
+========================= */
+
+.mobile-submenu{
+
+    display:none;
+
+    background:rgba(255,255,255,.02);
+
+}
+
+.mobile-submenu.active{
+
+    display:block;
+
+    animation:submenuFade .25s ease;
+
+}
+
+.mobile-submenu a{
+
+    height:48px;
+
+    font-size:14px;
+
+    padding-left:46px;
+
+    color:rgba(255,255,255,.78);
+
+}
+
+.mobile-submenu a:hover{
+
+    padding-left:56px;
+
+}
+
+@keyframes submenuFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-10px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* =========================
+   Sticky Navbar Optimization
+========================= */
+
+.navbar{
+
+    transform:translateY(0);
+
+    will-change:transform,background,height;
+
+}
+
+.navbar.hide{
+
+    transform:translateY(-100%);
+
+}
+
+
+/* Smooth scrolling state */
+
+.navbar.scrolled{
+
+    border-bottom:1px solid rgba(255,255,255,.04);
+
+}
+
+
+/* =========================
+   Scroll Animation
+========================= */
+
+.nav-menu li{
+
+    transition:
+
+    transform .25s,
+
+    opacity .25s;
+
+}
+
+.nav-menu li:hover{
+
+    transform:translateY(-2px);
+
+}
+
+
+/* Contact button */
+
+.btn-contact{
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.btn-contact::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-120%;
+
+    top:0;
+
+    width:80%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.25),
+
+        transparent
+
+    );
+
+    transition:.8s;
+
+}
+
+.btn-contact:hover::before{
+
+    left:140%;
+
+}
+
+
+/* =========================
+   Touch Optimization
+========================= */
+
+@media (hover:none){
+
+    .dropdown{
+
+        display:none;
+
+    }
+
+    .nav-menu a:hover{
+
+        color:#fff;
+
+    }
+
+    .btn-contact:hover{
+
+        transform:none;
+
+    }
+
+}
+
+
+/* Better tap targets */
+
+button,
+a{
+
+    -webkit-tap-highlight-color:transparent;
+
+}
+
+
+/* =========================
+   Responsive
+========================= */
+
+@media(max-width:1400px){
+
+    .navbar-wrapper{
+
+        padding:0 32px;
+
+    }
+
+}
+
+@media(max-width:1200px){
+
+    .nav-menu ul{
+
+        gap:28px;
+
+    }
+
+    .btn-contact{
+
+        padding:0 22px;
+
+    }
+
+}
+
+@media(max-width:992px){
+
+    .nav-menu{
+
+        display:none;
+
+    }
+
+    .mobile-btn{
+
+        display:block;
+
+    }
+
+    .btn-contact{
+
+        display:none;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .navbar{
+
+        height:72px;
+
+    }
+
+    .navbar-wrapper{
+
+        padding:0 20px;
+
+    }
+
+    .logo img{
+
+        height:34px;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .mobile-menu{
+
+        width:100%;
+
+        max-width:none;
+
+    }
+
+}
+
+
+/* =========================
+   Desktop Only
+========================= */
+
+@media(min-width:993px){
+
+    .mobile-menu{
+
+        display:none;
+
+    }
+
+}
+
+
+/* =========================
+   Dark Theme Polish
+========================= */
+
+body{
+
+    background:#050A16;
+
+}
+
+.navbar,
+.dropdown,
+.mobile-menu{
+
+    color:#fff;
+
+}
+
+::selection{
+
+    background:#AD1445;
+
+    color:#fff;
+
+}
+
+
+/* Scrollbar */
+
+.mobile-menu::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+.mobile-menu::-webkit-scrollbar-thumb{
+
+    background:rgba(173,20,69,.5);
+
+    border-radius:999px;
+
+}
+
+.mobile-menu::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+
+
+/* =========================
+   Accessibility
+========================= */
+
+.nav-menu a:focus-visible,
+.dropdown a:focus-visible,
+.mobile-menu a:focus-visible,
+.btn-contact:focus-visible{
+
+    outline:2px solid #AD1445;
+
+    outline-offset:3px;
+
+    border-radius:6px;
+
+}
+
+
+/* =========================
+   Enterprise Finish
+========================= */
+
+.navbar,
+.dropdown,
+.mobile-menu,
+.btn-contact,
+.mobile-btn{
+
+    user-select:none;
+
+}
+
+.navbar *{
+
+    box-sizing:border-box;
+
+}
+
+.navbar img{
+
+    display:block;
+
+}
+
+.navbar a{
+
+    cursor:pointer;
+
+}
