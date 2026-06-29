@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ARCTEC | Intelligent Sensing Solutions</title>
+
+    <meta name="description"
+        content="ARCTEC delivers full-stack multimodal intelligent sensing solutions for transportation, security, automation and industrial applications.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <header class="header" style="background: #ffffff; padding: 20px 80px;">
+
+        <div class="container">
+
+            <a href="#" class="logo">
+                <img src="assets/images/ARCTEC.png" alt="" style="height: 150px; vertical-align: middle;margin-top: 10px">
+            </a>
+            
+            <style>
+            .menu a {
+                font-family: "Open Sans", "PingFang SC", Arial, sans-serif;
+                color: #0d0c0c; 
+                text-decoration: none; 
+                font-size: 20px;
+                font-weight: 200;
+                padding: 30px 15px 8px 15px; 
+                border-bottom: 6px solid transparent;  
+                transition: border-color 0.3s ease;  
+
+                }
+
+            .nav-links a:hover {
+               border-bottom-color: #1b1b1b;  
+            }
+            </style>
+            <nav>
+
+                <ul class="menu">
+
+                     <li><a href="why-arctec.html">Why <span style="font-weight: 600;letter-spacing: 1px;">ARCTEC</span></a></li>
+
+                    <li><a href="#">Industries</a></li>
+ 
+                    <li><a href="#">Solutions</a></li>
+
+                    <li><a href="#">Projects</a></li>
+
+                    <li><a href="#">Company</a></li>
+
+                    <li><a href="#">Resources</a></li>
+
+                    <li><a href="#">Contact</a></li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+<!-- ================= HERO（双图轮播 + 缩放 + 渐变遮罩） ================= -->
+<section class="hero" style="
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    margin: 0;
+">
+
+    <!-- 轮播背景 -->
+    <div class="hero-slides" style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    ">
+        <!-- 图1 -->
+        <div class="slide active" style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('image/banner1.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 1;
+            transition: opacity 1s ease;
+            will-change: transform, opacity;
+        "></div>
+        <!-- 图2 -->
+        <div class="slide" style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('image/banner.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1s ease;
+            will-change: transform, opacity;
+        "></div>
+        <!-- 如果你有更多图片，继续添加 -->
+    </div>
+
+    <!-- 渐左右遮罩覆盖到 100%（全屏左侧渐变）） -->
+ <div class="hero-overlay" style="
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.1) 100%),
+        linear-gradient(to top, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 60%);
+    z-index: 1;
+"></div>
+
+    <!-- 文字内容 -->
+    <div class="hero-content" style="
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+    z-index: 2;
+    width: 90%;
+    max-width: 1000px;
+    padding: 20px;
+">
+        <div class="eyebrow" style="
+            font-size: 1rem;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            font-weight: 300;
+            opacity: 0.9;
+        ">
+            SHENZHEN ARCTEC INNOVATION TECHNOLOGY CO., LTD
+        </div>
+        <h1 style="
+            font-size: 48px;
+            font-weight: 700;
+            padding-bottom: 2px;
+            line-height: 1.3;
+            text-align: center;
+            white-space: nowrap;
+            margin-top: 30px; 
+        ">
+            FULL-STACK MULTIMODAL INTELLIGENT <br>SENSING SOLUTIONS EXPERT
+        </h1>
+        <p style="
+            font-size: 1.2rem;
+            opacity: 0.9;
+            color: #ffffff;
+            margin-top: 30px; 
+        ">
+            Intelligent Transportation
+            · Smart Security
+            · Bulk Material Handling
+            · Unmanned System
+        </p>
+    </div>
+
+    <!-- 底部小圆点 -->
+    <div class="dots" style="
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 12px;
+        z-index: 3;
+    ">
+        <span class="dot active" style="
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ffffff;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        "></span>
+        <span class="dot" style="
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            cursor: pointer;
+            transition: background 0.3s ease;
+        "></span>
+    </div>
+</section>
+<script>
+    (function() {
+        const slides = document.querySelectorAll('.hero-slides .slide');
+        const dots = document.querySelectorAll('.dot');
+        let current = 0;
+        let interval;
+
+        function goTo(index) {
+            // 移除所有 active，重置透明度
+            slides.forEach((s, i) => {
+                s.classList.remove('active');
+                s.style.opacity = '0';
+            });
+            // 激活当前幻灯片
+            slides[index].classList.add('active');
+            slides[index].style.opacity = '1';
+
+            // 更新圆点
+            dots.forEach((d, i) => {
+                d.style.background = (i === index) ? '#ffffff' : 'rgba(255,255,255,0.5)';
+            });
+            current = index;
+        }
+
+        function next() {
+            goTo((current + 1) % slides.length);
+        }
+
+        function startAuto() {
+            if (interval) clearInterval(interval);
+            interval = setInterval(next, 5000);
+        }
+
+        // 点击圆点手动切换
+        dots.forEach((dot, idx) => {
+            dot.addEventListener('click', function() {
+                goTo(idx);
+                clearInterval(interval);
+                startAuto();
+            });
+        });
+
+        // 初始化
+        goTo(0);
+        startAuto();
+    })();
+</script>
+
+
+<!-- ================= Problems We Solve ================= -->
+<section class="section">
+    <div class="container" style="max-width: 100%; width: 100%; padding: 0 500px;">
+      
+
+        <div class="section-title" style="text-align: center;">
+            Problems We Solve
+        </div>
+        <div style="background: #fff; padding: 30px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.2); box-shadow: 0 12px 48px rgba(0,0,0,0.25);">
+            
+
+        <div class="card-grid" style="grid-template-columns: repeat(2, 1fr); gap: 30px;">
+            <!-- 卡片 1：Smart Security -->
+            <div class="card" style="
+                background-image: url('image/problems/1-security.png');
+                background-size: cover;
+                background-position: center;
+                position: relative;
+                color: #ffffff;
+                border: 1px solid rgba(255,255,255,0.15);
+                overflow: hidden;
+                border-radius: var(--radius);
+                padding: 40px;
+                min-height: 300px;
+                transition: var(--transition);
+            ">
+                <!-- 半透明遮罩 -->
+                <div style="
+                    position: absolute;
+                    inset: 0;
+                    background: rgba(0, 0, 0, 0.55);
+                    border-radius: var(--radius);
+                    z-index: 0;
+                "></div>
+                <!-- 内容 -->
+                <div style="position: relative; z-index: 1;">
+                    <h3 style="font-size: 26px; font-weight: 700; margin-bottom: 18px;">Smart Security</h3>
+                    <p style="
+                        color: #ffffff;
+                        font-family: 'Open Sans', Arial, sans-serif;
+                        font-size: 20px;
+                        line-height: 1.8;
+                        margin-bottom: 20px;
+                    ">
+                        · Perimeter Intrusion Detection
+                        <br>
+                        · Wide Area Surveillance
+                    
+                    </p>
+                    <!-- 卡片内部按钮 -->
+                    <a href="security.html" style="
+                        display: inline-block;
+                        margin-top: 10px;
+                        padding: 8px 28px;
+                        border: 2px solid #fff;
+                        border-radius: 30px;
+                        color: #fff;
+                        font-weight: 600;
+                        font-size: 14px;
+                        text-decoration: none;
+                        transition: 0.3s;
+                    " onmouseover="this.style.background='#ffffff'; this.style.color='#111'; this.style.borderColor='#ffffff';" onmouseout="this.style.background='transparent'; this.style.color='#ffffff'; this.style.borderColor='rgba(255,255,255,0.6)';">
+                        Explore More →
+                    </a>
+                </div>
+            </div>
+
+            <!-- 卡片 2：Intelligent Transportation -->
+            <div class="card" style="
+                background-image: url(image/problems/2-transport.jpg);
+                background-size: cover;
+                background-position: center;
+                position: relative;
+                color: #ffffff;
+                border: 1px solid rgba(255,255,255,0.15);
+                overflow: hidden;
+                border-radius: var(--radius);
+                padding: 40px;
+                min-height: 300px;
+                transition: var(--transition);
+            ">
+                <div style="
+                    position: absolute;
+                    inset: 0;
+                    background: rgba(0, 0, 0, 0.55);
+                    border-radius: var(--radius);
+                    z-index: 0;
+                "></div>
+                <div style="position: relative; z-index: 1;">
+                    <h3 style="font-size: 26px; font-weight: 700; margin-bottom: 18px;">Intelligent Transportation</h3>
+                    <p style="
+                        color: #ffffff;
+                        font-family: 'Open Sans', Arial, sans-serif;
+                        font-size: 20px;
+                        line-height: 1.8;
+                        margin-bottom: 20px;
+                    ">
+                        · Highway Monitoring
+                        <br>
+                        · Smart Intersections
+                    </p>
+                    <a href="transportation.html" style="
+                        display: inline-block;
+                        margin-top: 10px;
+                        padding: 8px 28px;
+                        border: 2px solid rgba(255,255,255,0.6);
+                        border-radius: 30px;
+                        color: #fff;
+                        font-weight: 600;
+                        font-size: 14px;
+                        text-decoration: none;
+                        transition: 0.3s;
+                    " onmouseover="this.style.background='#ffffff'; this.style.color='#111'; this.style.borderColor='#ffffff';" onmouseout="this.style.background='transparent'; this.style.color='#ffffff'; this.style.borderColor='rgba(255,255,255,0.6)';">
+                        Explore More →
+                    </a>
+                </div>
+            </div>
+
+            <!-- 卡片 3：Bulk Material Handling -->
+            <div class="card" style="
+                background-image: url(image/problems/3-Bulk\ Material.webp);
+                background-size: cover;
+                background-position: center;
+                position: relative;
+                color: #ffffff;
+                border: 2px solid rgba(255,255,255,0.15);
+                overflow: hidden;
+                border-radius: var(--radius);
+                padding: 40px;
+                min-height: 300px;
+                transition: var(--transition);
+            ">
+                <div style="
+                    position: absolute;
+                    inset: 0;
+                    background: rgba(0, 0, 0, 0.55);
+                    border-radius: var(--radius);
+                    z-index: 0;
+                "></div>
+                <div style="position: relative; z-index: 1;">
+                    <h3 style="font-size: 26px; font-weight: 700; margin-bottom: 18px;">Bulk Material Handling</h3>
+                    <p style="
+                        color: #ffffff;
+                        font-family: 'Open Sans', Arial, sans-serif;
+                        font-size: 20px;
+                        line-height: 1.8;
+                        margin-bottom: 20px;
+                    ">
+                        · Conveyor Monitoring
+                        <br>
+                        · Industrial Automation
+                    </p>
+                    <a href="bulk.html" style="
+                        display: inline-block;
+                        margin-top: 10px;
+                        padding: 8px 28px;
+                        border: 2px solid rgba(255,255,255,0.6);
+                        border-radius: 30px;
+                        color: #fff;
+                        font-weight: 600;
+                        font-size: 14px;
+                        text-decoration: none;
+                        transition: 0.3s;
+                    " onmouseover="this.style.background='#ffffff'; this.style.color='#111'; this.style.borderColor='#ffffff';" onmouseout="this.style.background='transparent'; this.style.color='#ffffff'; this.style.borderColor='rgba(255,255,255,0.6)';">
+                        Explore More →
+                    </a>
+                </div>
+            </div>
+
+            <!-- 卡片 4：Unmanned System -->
+            <div class="card" style="
+                background-image: url(image/problems/4-unmanned\ system.jpg);
+                background-size: cover;
+                background-position: center;
+                position: relative;
+                color: #ffffff;
+                border: 2px solid rgba(255,255,255,0.15);
+                overflow: hidden;
+                border-radius: var(--radius);
+                padding: 40px;
+                min-height: 300px;
+                transition: var(--transition);
+            ">
+                <div style="
+                    position: absolute;
+                    inset: 0;
+                    background: rgba(0, 0, 0, 0.55);
+                    border-radius: var(--radius);
+                    z-index: 0;
+                "></div>
+                <div style="position: relative; z-index: 1;">
+                    <h3 style="font-size: 26px; font-weight: 700; margin-bottom: 18px;">Unmanned System</h3>
+                    <p style="
+                        color: #ffffff;
+                        font-family: 'Open Sans', Arial, sans-serif;
+                        font-size: 20px;
+                        line-height: 1.8;
+                        margin-bottom: 20px;
+                    ">
+                        · Robotics
+                        <br>
+                        · Edge AI
+                    </p>
+                    <a href="unmanned.html" style="
+                        display: inline-block;
+                        margin-top: 10px;
+                        padding: 8px 28px;
+                        border: 2px solid rgba(255,255,255,0.6);
+                        border-radius: 30px;
+                        color: #fff;
+                        font-weight: 600;
+                        font-size: 14px;
+                        text-decoration: none;
+                        transition: 0.3s;
+                    " onmouseover="this.style.background='#ffffff'; this.style.color='#111'; this.style.borderColor='#ffffff';" onmouseout="this.style.background='transparent'; this.style.color='#ffffff'; this.style.borderColor='rgba(255,255,255,0.6)';">
+                        Explore More →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- ================= WHY ================= -->
+<section class="section dark">
+   <div class="container" style="max-width: 100%; width: 100%; padding: 0 30px;">
+
+        <div class="section-title" style="text-align: center;">
+            Why Arctec
+        </div>
+
+            <div class="feature-grid" style="grid-template-columns: repeat(4, 1fr);">
+
+                <!-- 卡片 1 -->
+                <div class="feature">
+                    <h3 style="text-align: center;">
+                        <div style="margin-bottom: 12px;">
+                            <img src="image/why/1-Advanced Hardware Design.png" alt="Hardware" style="width: 48px; height: 48px; display: block; margin: 0 auto;">
+                        </div>
+                        Advanced Hardware Design
+                    </h3>
+                    <p style="text-align: center;">Precision engineering designed for demanding environments.</p>
+                </div>
+
+                <!-- 卡片 2 -->
+                <div class="feature">
+                    <h3 style="text-align: center;">
+                        <div style="margin-bottom: 12px;">
+                            <img src="image/why/2-Solving.png" alt="System" style="width: 48px; height: 48px; display: block; margin: 0 auto;">
+                        </div>
+                        System-Level Solutions
+                    </h3>
+                    <p style="text-align: center;">Complete sensing ecosystem from hardware to software.</p>
+                </div>
+
+                <!-- 卡片 3 -->
+                <div class="feature">
+                    <h3 style="text-align: center;">
+                        <div style="margin-bottom: 12px;">
+                            <img src="image/why/3-Technical Support.png" alt="Support" style="width: 48px; height: 48px; display: block; margin: 0 auto;">
+                        </div>
+                        Technical Support
+                    </h3>
+                    <p style="text-align: center;">End-to-end engineering support before and after deployment.</p>
+                </div>
+
+                <!-- 卡片 4 -->
+                <div class="feature">
+                    <h3 style="text-align: center;">
+                        <div style="margin-bottom: 12px;">
+                            <img src="image/why/4-Easy Integration.png" alt="Integration" style="width: 48px; height: 48px; display: block; margin: 0 auto;">
+                        </div>
+                        Easy Integration
+                    </h3>
+                    <p style="text-align: center;">API, SDK and Edge AI platform for rapid integration.</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+  <!-- ================= Projects ================= -->
+<section class="section">
+    <div class="container">
+        <div class="section-title">Projects</div>
+
+        <div class="Projects-grid">
+            <!-- 每个卡片 -->
+            <div class="Projects-card" style="background-image: url('image/Projects/1-Smart\ Transportation.jpg');">
+                <span class="Projects-title">Smart Transportation →</span>
+            </div>
+            <div class="Projects-card" style="background-image: url('image/Projects/2-Smart\ Security.jpg');">
+                <span class="Projects-title">Smart Security →</span>
+            </div>
+            <div class="Projects-card" style="background-image: url('image/Projects/3-Smart\ Warehouse.jpg');">
+                <span class="Projects-title">Smart Warehouse →</span>
+            </div>
+            <div class="Projects-card" style="background-image: url('image/Projects/4-Smart\ City.jpg');">
+                <span class="Projects-title">Smart City →</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- ================= FOOTER ================= -->
+
+   <footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Left：品牌区 -->
+        <div class="footer-brand">
+            <img src="image/ARCTEClogo.png" alt="ARCTEC" class="footer-logo" style="height: 100px; width: auto;">
+            <p>
+                SHENZHEN ARCTEC INNOVATION TECHNOLOGY CO., LTD
+            <span style="font-size: 13px; font-weight: 400; color: #aaa;">
+            <br>FULL-STACK MULTIMODAL INTELLIGENT SENSING SYSTEM SOLUTIONS EXPERT
+        </span>
+            </p>
+        </div>
+
+        <!-- Products -->
+        <div class="footer-column">
+            <h2>Products</h2>
+            <a href="#">Traffic Radar</a>    <!-- 井号用链接网页代替 -->
+            <a href="#">Security Radar</a>
+            <a href="#">AI Camera</a>
+            <a href="#">Edge AI</a>
+        </div>
+
+        <!-- Solutions -->
+        <div class="footer-column">
+            <h2>Solutions</h2>
+            <a href="#">Transportation</a>
+            <a href="#">Perimeter Security</a>
+            <a href="#">Smart City</a>
+            <a href="#">Industrial Automation</a>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-column">
+            <h2>Contact</h2>
+
+              <a href="mailto:arctec@szarctec.com" style="display: block; color: #aaa; text-decoration: none; margin-bottom: 4px; font-size: 13px;">
+                <h4>Email</h4>
+            </a>
+            <a href="mailto:arctec@szarctec.com" style="display: block; color: #aaa; text-decoration: none; margin-bottom: 12px;">
+                arctec@szarctec.com
+            </a>
+
+            <a href="tel:0755 - 8865 8488" style="display: block; color: #aaa; text-decoration: none; margin-bottom: 4px; font-size: 13px;">
+                <h4>Phone</h4>
+            </a>
+            <a href="tel:0755 - 8865 8488" style="display: block; color: #aaa; text-decoration: none; margin-bottom: 12px;">
+                +86 755 8865 8488
+            </a>
+
+            <a href="https://wa.me/8618123838860" target="_blank" style="display: block; color: #aaa; text-decoration: none; margin-bottom: 4px; font-size: 13px;">
+                <h4>WhatsApp</h4>
+            </a>
+            <a href="https://wa.me/8618123838860" target="_blank" style="display: block; color: #aaa; text-decoration: none;">
+                +86 181 2383 8860
+            </a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <span>
+            &copy; <span id="year"></span> ARCTEC Innovation Technology Co., Ltd.
+            All Rights Reserved.
+        </span>
+        <div>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+        </div>
+    </div>
+
+</footer>
+
+<script>
+    // 自动更新版权年份
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
